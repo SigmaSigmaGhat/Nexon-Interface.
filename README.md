@@ -41,3 +41,25 @@ You can create a draggable window where you can put your cheats or controls. Her
 local NexonInterface = require(game:GetService("ReplicatedStorage"):WaitForChild("NexonInterface"))
 
 local myWindow = NexonInterface:createWindow(game.Players.LocalPlayer.PlayerGui, "Cheat Menu", UDim2.new(0, 400, 0, 300), UDim2.new(0.5, -200, 0.5, -150))
+```
+# Create a Button.
+```lua
+local button = NexonInterface:createButton(game.Players.LocalPlayer.PlayerGui, UDim2.new(0, 200, 0, 50), UDim2.new(0.5, -100, 0.5, -25), "Activate Speed Hack", function()
+    -- Code to activate speed hack or other cheat
+    print("Speed hack activated!")
+end)
+```
+# Create Toggle
+```lua
+local toggleButton = NexonInterface:createToggleButton(game.Players.LocalPlayer.PlayerGui, UDim2.new(0, 200, 0, 50), UDim2.new(0.5, -100, 0.5, -25), "Toggle Aimbot", function()
+    -- Code to enable/disable aimbot
+    print("Aimbot toggled!")
+end)
+```
+# Create a Slider
+```lua
+local slider = NexonInterface:createSlider(game.Players.LocalPlayer.PlayerGui, UDim2.new(0, 300, 0, 20), UDim2.new(0.5, -150, 0.5, -10), 0, 100, function(value)
+    -- Adjust value based on slider (e.g., change walk speed)
+    print("Speed set to: " .. value)
+end)
+```
